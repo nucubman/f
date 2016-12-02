@@ -1,0 +1,35 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#include <stdlib.h> 
+#include <conio.h>
+#include <time.h>
+
+main() {
+	float s = 0;
+	int i = 0;
+	int n = 5;
+
+	float a = 0;
+	float b = 1;
+
+
+	float j = 0;
+	float k = 1;
+	
+	while (i < n) {
+		b = j + k;
+		a++;
+		if (i % 2)
+			s /= a / b;
+		else
+			s *= a / b;
+		
+
+		printf("%f/%f=%f\n", a, b, a / b);
+
+		k = j;
+		j = b;
+		i++;
+	}
+	getchar();
+}
